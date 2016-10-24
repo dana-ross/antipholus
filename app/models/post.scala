@@ -2,8 +2,6 @@ package wpapi.models
 
 import play.api.libs.json._
 
-
-
 /**
  * @see http://v2.wp-api.org/reference/posts/
  * @see http://demo.wp-api.org/wp-json/wp/v2/posts
