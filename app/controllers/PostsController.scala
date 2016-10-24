@@ -10,7 +10,7 @@ import wpapi.models._
 class PostsController extends Controller {
 
     def query = Action {
-        var results = new WPPost()
+        var results:Array[WPPost] = Array(new WPPost, new WPPost, new WPPost, new WPPost)
         Ok(Json.toJson(results))
     }
 }
