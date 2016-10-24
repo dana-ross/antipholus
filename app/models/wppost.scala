@@ -18,6 +18,7 @@ case class WPPost() {
   var password = ""
   var slug = ""
   var status = ""
+  var post_type = ""
   var title = new WPRenderedString("")
   var content = new WPRenderedString("")
   var author = 0
@@ -30,14 +31,35 @@ case class WPPost() {
   var categories = Array[Int]()
   var tags = Array[Int]()
 
-
 }
 
 object WPPost {
     implicit val wpPostWrites:Writes[WPPost] = new Writes[WPPost] {
         def writes(c: WPPost): JsValue = {
             Json.obj(
-                "id" -> c.id
+                // @TODO match order of the original API
+                "id" -> c.id,
+                "guid" -> c.guid,
+                "type" -> c.post_type,
+                "format" -> c.format,
+                "status" -> c.status,
+                "slug" -> c.slug,
+                "guid" -> c.guid,
+                "sticky" -> c.sticky,
+                "password" -> c.password,
+                "title" -> c.title,
+                "content" -> c.content,
+                "excerpt" -> c.excerpt,
+                "author" -> c.author,
+                "featured_media" -> c.featured_media,
+                "categories" -> c.categories,
+                "tags" -> c.tags,
+                "comment_status" -> c.comment_status,
+                "ping_status" -> c.ping_status,
+                "date" -> c.date,
+                "date_gmt" -> c.date_gmt,
+                "modified" -> c.modified,
+                "modified_gmt" -> c.modified_gmt
             )
         }
     }
