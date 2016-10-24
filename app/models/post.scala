@@ -35,7 +35,7 @@ case class WPPost() {
 
 }
 
- object WPPost {
+object WPPost {
     implicit val wpPostWrites:Writes[WPPost] = new Writes[WPPost] {
         def writes(c: WPPost): JsValue = {
             Json.obj(
