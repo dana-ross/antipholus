@@ -3,6 +3,7 @@ package wpapi.models
 import play.api.libs.json._
 
 
+
 /**
  * @see http://v2.wp-api.org/reference/posts/
  * @see http://demo.wp-api.org/wp-json/wp/v2/posts
@@ -31,9 +32,16 @@ case class WPPost() {
   var categories = Array[Int]()
   var tags = Array[Int]()
 
-  def unapply(o: WPPost): Option[String] = {
-    o.date
-  }
+
 }
 
-implicit val wppostsWrites = Json.writes[WPPost]
+ object WPPost {
+    implicit val wpPostWrites:Writes[WPPost] = new Writes[WPPost] {
+        def writes(c: WPPost): JsValue = {
+            Json.obj(
+                "id" -> c.id
+            )
+        }
+    }
+}
+
