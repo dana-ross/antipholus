@@ -8,13 +8,11 @@ import play.api.libs.json._
  */
 case class WPPost() {
 
-  var date = ""
-  var date_gmt = ""
+  var date = new WPDate()
   var guid = new WPRenderedString("")
   var id = 0
   var link = ""
-  var modified = ""
-  var modified_gmt = ""
+  var modified = new WPDate
   var password = ""
   var slug = ""
   var status = ""
@@ -59,10 +57,10 @@ object WPPost {
                 "tags" -> c.tags,
                 "comment_status" -> c.comment_status,
                 "ping_status" -> c.ping_status,
-                "date" -> c.date,
-                "date_gmt" -> c.date_gmt,
-                "modified" -> c.modified,
-                "modified_gmt" -> c.modified_gmt
+                "date" -> c.date.date,
+                "date_gmt" -> c.date.date_gmt,
+                "modified" -> c.modified.date,
+                "modified_gmt" -> c.modified.date_gmt
             )
         }
     }
