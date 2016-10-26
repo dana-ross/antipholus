@@ -6,4 +6,4 @@
 GET     /                           controllers.HomeController.index
 
 # WP API endpoints
-GET    /wp-json/wp/v2/posts          controllers.PostsController.query
+GET    /wp-json/wp/v2/posts          controllers.PostsController.query(_jsonp: Option[String])
