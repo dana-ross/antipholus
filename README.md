@@ -1,7 +1,7 @@
 # Antipholus: The WordPress REST API implemented in Scala
 
-> When everyone interacts with WordPress through a standard API, it doesn’t need to live on as a singular PHP application. WordPress becomes a lingua franca for content management. WordPress as an API can be implemented in PHP or any other programming language, and support any database or other storage engine. Implementations can be swapped out at will as technologies mature and evolve. Even CMSs which were once our competition can implement our API and continue on as they are, but with access to the same tools our authors use.
-> [The Road to 100%: One Future for WordPress](https://medium.com/@csixty4/the-road-to-100-one-future-for-wordpress-400f5cebbfd9#.mpo3vzu5k)
+> "When everyone interacts with WordPress through a standard API, it doesn’t need to live on as a singular PHP application. WordPress becomes a lingua franca for content management. WordPress as an API can be implemented in PHP or any other programming language, and support any database or other storage engine. Implementations can be swapped out at will as technologies mature and evolve. Even CMSs which were once our competition can implement our API and continue on as they are, but with access to the same tools our authors use."  
+> - [The Road to 100%: One Future for WordPress](https://medium.com/@csixty4/the-road-to-100-one-future-for-wordpress-400f5cebbfd9#.mpo3vzu5k)
 
 The goal of this project is to learn the WordPress REST API inside out, along with the Scala language and the Play framework.
 Along the way, I hope to prove a point that WordPress doesn't need to be tied to PHP forever. The REST API gives developers unprecedented
