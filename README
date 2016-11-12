@@ -1,49 +1,27 @@
-This is your new Play application
-=================================
+# Antipholus: The WordPress REST API implemented in Scala
 
-This file will be packaged with your application when using `activator dist`.
+    When everyone interacts with WordPress through a standard API, it doesn’t need to live on as a singular PHP application. WordPress becomes a lingua franca for content management. WordPress as an API can be implemented in PHP or any other programming language, and support any database or other storage engine. Implementations can be swapped out at will as technologies mature and evolve. Even CMSs which were once our competition can implement our API and continue on as they are, but with access to the same tools our authors use.
+    [The Road to 100%: One Future for WordPress](https://medium.com/@csixty4/the-road-to-100-one-future-for-wordpress-400f5cebbfd9#.mpo3vzu5k)
 
-There are several demonstration files available in this template.
+The goal of this project is to learn the WordPress REST API inside out, along with the Scala language and the Play framework.
+Along the way, I hope to prove a point that WordPress doesn't need to be tied to PHP forever. The REST API gives developers unprecedented
+flexibility to build WordPress themes with any technologies. Now it's time to consider what a standard API means for the server side.
 
-Controllers
-===========
+## Status
 
-- HomeController.scala:
+Very early stage work in progress.
 
-  Shows how to handle simple HTTP requests.
+## Contributing
 
-- AsyncController.scala:
+Currently not accepting contributions until I get a working foundation.
 
-  Shows how to do asynchronous programming when handling a request.
+## License
 
-- CountController.scala:
+This software is licensed under the Apache 2 license, quoted below.
 
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with
+the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
-Components
-==========
-
-- Module.scala:
-
-  Shows how to use Guice to bind all the components needed by your application.
-
-- Counter.scala:
-
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.scala:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-Filters
-=======
-
-- Filters.scala:
-
-  Creates the list of HTTP filters used by your application.
-
-- ExampleFilter.scala
-
-  A simple filter that adds a header to every response.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
+language governing permissions and limitations under the License.
